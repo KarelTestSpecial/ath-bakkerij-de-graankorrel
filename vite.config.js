@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import athenaEditorPlugin from '../../factory-engine/lib/vite-plugin-athena-editor.js'
 
 export default defineConfig({
-  base: '/bakkerij-de-graankorrel/', 
+  base: process.env.NODE_ENV === 'production' ? '/ath-bakkerij-de-graankorrel/' : '/', 
   plugins: [
     react(),
     tailwindcss(),
